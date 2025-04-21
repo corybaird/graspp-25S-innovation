@@ -2,7 +2,13 @@
 
 ## team members
 
-Yoshiya Bito
-Kohsuke Sagara
-Shuma Suzuki
-Rin Nitta
+- Yoshiya Bito
+- Kohsuke Sagara
+- Shuma Suzuki
+- Rin Nitta
+- Joseph Chen
+
+## Topic
+
+## Data
+
