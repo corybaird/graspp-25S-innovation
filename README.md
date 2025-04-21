@@ -5,3 +5,4 @@
 Yoshiya Bito
 Kohsuke Sagara
 Shuma Suzuki
+Rin Nitta
