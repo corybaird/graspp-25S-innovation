@@ -5,7 +5,7 @@ import re
 import tqdm
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-import pandas as pd
+import pandas as pdq
 
 # Constants for crawl_page part
 DOWNLOAD_DIR = "downloads"  # Changed to be relative to project root
