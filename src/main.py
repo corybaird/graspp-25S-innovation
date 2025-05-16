@@ -314,8 +314,9 @@ class DataCleaner:
     """
     A class to clean and process downloaded EXCEL files.
     """
-    def __init__(self, download_dir):
+    def __init__(self, download_dir, font_path='/Library/Fonts/Arial Unicode.ttf'):
         self.download_dir = download_dir
+        self.font_path = font_path # visualization use 
         self.research_expense_cleaner = ResearchExpenseCleaner(download_dir)
         self.patent_count_cleaner = PatentCountCleaner(download_dir)
         
@@ -358,7 +359,11 @@ class DataCleaner:
         from matplotlib.font_manager import FontProperties
         # 自分のパソコンにインストールされている日本語フォントを指定してください
         # For MacOS
-        fp = FontProperties(fname = '/Library/Fonts/Arial Unicode.ttf',size = 11)
+        try:
+            fp = FontProperties(fname = self.font_path,size = 11)
+        except Exception as e:
+            print(f"Error loading font: {e}")
+            return
         plt.rc('font', family=fp.get_name())
         # 1: Top 10 Industries by Total R&D Costs (2020)
         df_2020 = self.ResearchExpenseDict[year]
@@ -590,7 +595,7 @@ def main():
     # Run scraper
     print("Starting data scraping...")
     scraper = DataScraper(BASE_URLs_scrape, DOWNLOAD_DIR, years_scrape)
-#    scraper.run_scraper()
+    scraper.run_scraper()
     print("Data scraping complete.")
 
     # Run data cleaning
