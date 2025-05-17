@@ -1,0 +1,4 @@
+[core]
+    remote = gs://graspp-25s-innovation
+['remote "gs://graspp-25s-innovation"']
+    url = gs://graspp-25s-innovation
