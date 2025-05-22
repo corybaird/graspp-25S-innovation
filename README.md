@@ -38,13 +38,38 @@ There is a positive correlation between the amount of R&D spending and the numbe
 - 第11表　産業別、資本金規模別、企業数、研究開発費及び売上高比率、受託研究費、有形固定資産のうち研究開発関連当期取得額
 
 ### Variables
-- 
-- 
-- 
+- $t$ : year 2010 ~ 2021
+- $i$ : Industry $i$
+- $patent_{it}$ : R&D expenditure of industry $i$ in year $t$
+- $RDexp_{it}$ : The number of patents obtained by industry $i$ in year $t$
+- $empl_{it}$ : Number of employees inindustry $i$ in year $t$
+- $e_{it}$ : Error term
+
 
 ## (6) Regression Models
+### Simple Regression Model
+$$ patent_{it} = const + RDexp_{it} + e_{it} $$
 
-## (7) The file path
-###  Milestone 1
-notebooks\assignment_group\HW1\Assignment1.ipynb
+### Fixed Effects Model
+$$ patent_{it} = const + RDexp_{it} + empl_{it} + e_{it} $$
 
+## (7) Regression Analysis
+This item is planned to be updated.
+
+## (8) Conclusion
+This item is planned to be updated.
+
+## (9) The file path
+### Milestone 1
+`notebooks\assignment_group\HW1\Assignment1.ipynb`
+
+### Milestone 2
+`notebooks\assignment_group\HW2\Assignment2.ipynb`
+
+There are 4 plots
+
+
+### Our Special Challenge
+`\data\README.md`
+
+We challenged to use DVC.
